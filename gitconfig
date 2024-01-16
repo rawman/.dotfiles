@@ -1,0 +1,27 @@
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	unstage = reset HEAD --
+	cob = checkout -b
+	cm = commit -m
+	amend = commit --amend
+	up = pull --rebase --prune
+	rv = checkout
+	mt = mergetool
+	rbc = rebase --continue
+	rbi = rebase --ignore
+[user]
+	name = Tomasz Romaniuk
+	email = tomasz.romaniuk@gmail.com
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[hub]
+	protocol = https
